@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.6.4.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+// 		$('input[id=btn1]')
+		$('#btn1').on('click', function() {
+			res1 = document.getElementById('result1');
+			console.log(res1);
+			
+			hlist = res1.getElementsByTagName('h1');
+			hlist[1].style.color = 'red';
+			
+			for(i=0; i<hlist.length; i++) {
+				hlist[i].style.color = 'red';
+			}
+		})
+		
+		$('#btn2').on('click', function(){
+			hlist = $('#result2 h1'); // 자식표현
+			
+			hlist.eq(2).css('color', 'blue');
+			$(hlist).eq(1).css('color', 'green');
+		})
+	})
+</script>
+</head>
+
+<body>
+
+	<div class="box">
+		<p>
+		javascript를 이용해서 h1태그를 검색하고 글자색을 변경한다.<br>
+		모두를 대상으로 하려면 for문으로 실행한다.
+		hlist = document.getElementsByTagName('h1');
+		hlist[1].style.color = 'red';
+		</p>
+
+		<input type="button" value="확인" id="btn1"> <br>
+		<br>
+		<div class="result" id="result1">
+			<h1>무궁화 꽃이 피었습니다~!</h1>
+			<h1>무궁화 꽃이 피었습니다~!</h1>
+			<h1>무궁화 꽃이 피었습니다~!</h1>
+			<h1>무궁화 꽃이 피었습니다~!</h1>
+			<h1>무궁화 꽃이 피었습니다~!</h1>
+		
+		</div>
+	</div>
+	
+	<div class="box">
+		<p>
+		jQuery를 이용해서 h1태그를 검색하고 글자색을 변경한다.<br>
+		h1태그 전체를 대상으로 한다.<br>
+		hlist = $('h1');
+		hlist.css('color', 'blue');
+		특정대상을 선택할 때는 $('h1').eq(2)
+		</p>
+
+		<input type="button" value="확인" id="btn2"> <br>
+		<br>
+		<div class="result" id="result2">
+		<h1>무궁화 꽃이 피었습니다~!</h1>
+		<h1>무궁화 꽃이 피었습니다~!</h1>
+		<h1>무궁화 꽃이 피었습니다~!</h1>
+		<h1>무궁화 꽃이 피었습니다~!</h1>
+		<h1>무궁화 꽃이 피었습니다~!</h1>
+		</div>
+	</div>
+</body>
+</html>

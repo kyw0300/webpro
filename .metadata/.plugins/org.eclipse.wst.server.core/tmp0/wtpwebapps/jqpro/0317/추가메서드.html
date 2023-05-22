@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$('#append').on('click',function(){
+		vimg = $('<img src="../images/jQuery.jpg" alt="jQuery.jpg">');
+		
+// 		$(vimg).appendTo('#result1');
+// 		$(vimg).appendTo('#p1');
+		$('#p1').append(vimg); // 셀렉터로 준 것과 매개변수로 주는 차이 , $ 유무 있음
+		
+	})
+	
+	$('#prepend').on('click',function(){
+		vimg = $('<img src="../images/jQuery.jpg" alt="jQuery.jpg">');
+// 		$(vimg).prependTo('#result1');
+// 		$(vimg).prependTo('#p1');
+		$('#p1').prepend(vimg);
+		
+	})
+	
+	$('#before').on('click',function(){
+		vimg = $('<img src="../images/jQuery.jpg" alt="jQuery.jpg">');
+// 		$(vimg).insertBefore($('#p2'));	
+		$('#p2').before(vimg);
+	})
+	
+	$('#after').on('click',function(){
+		vimg = $('<img src="../images/jQuery.jpg" alt="jQuery.jpg">');
+// 		$(vimg).insertAfter($('#p2'));	
+		$('#p2').after(vimg);
+	})
+	
+	$('.pp').on('click',function(){
+		tvalue = $(this).attr('title');
+		vimg = $("<img src='../images/" + tvalue + ".jpg ' alt='jQuery.jpg'>");
+		$(this).append(vimg);
+	})
+})
+
+</script>
+<style type="text/css">
+p{
+/* 	border: 1px solid green; */
+	padding: 5px;
+}
+img{
+	width: 50px;
+	height: 50px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+	<p>
+	버튼을 클릭하면 이미지를 만들어서 id="result1" 요소에 추가한다.<br>
+	이미지를 만들어서 id="result1" 요소에 추가하기<br>
+	append / appendTo<br>
+	prepend / prependTo<br>
+	</p>
+	
+	<input type="button" value="뒤로추가" id="append">
+	<input type="button" value="앞으로추가" id="prepend">
+	<br><br>
+	<div class="result" id="result1"></div>
+	<p class="pp" id="p1" title="사자2">JQUERY</p>
+</div>
+
+<div class="box">
+
+	<p>
+	이미지를 만들어서 id="result2" 요소에 추가하기
+	before / insertBefore<br>
+	after / insertAfter<br>
+	</p>
+	
+	<input type="button" value="앞으로추가" id="before">
+	<input type="button" value="뒤로추가" id="after">
+	<br><br>
+	<div class="result" id="result2"></div>
+	<p class="pp" id="p2" title="jQuery">JQUERY</p>
+	<p class="pp" title="사자">Java Script</p>
+	<p class="pp" title="호랑이">Head First Java</p>
+	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('p').on('click',function(){
+		vp = $(this).parent();
+// 		alert($(vp).css('border'))	;
+		
+		if($(vp).is('.result')) {
+			p1 = $(this).clone().css('color','red');
+			$(vp).append(p1);
+// 			alert("맞다.")
+		} else {
+			alert("작업 대상이 아닙니다.")
+		}
+		
+	})
+})
+</script>
+</head>
+
+<body>
+
+<div class="box">
+	<p>
+		p태그를 클릭하면 부모가 result인지 비교<br>
+		맞다면 복사하여 부모에 붙여넣기한다.<br>
+		틀리면 '작업대상이 아닙니다'를 출력
+	</p>
+	
+	<br><br>
+	<div class="result" id="result1">
+		<p>정대만서태웅송태섭강백호채치수</p>
+	</div>
+	
+	<div class="result" id="result2">
+		<p>뜨거운 코트를 가르며</p>
+	</div>
+	
+	<p>너의 시선을 느껴 놓치지 않아</p>
+	
+</div>
+</body>
+</html>

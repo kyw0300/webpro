@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="../js/jquery-3.6.4.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#btn1').on('click', function(){
+			alert($('body').html());
+		})
+		
+		// 속성을 이용한 선택들
+		$('input[value=p_html]').on('click', () => {  // value값 이용
+// 		$('input[id=btn2]').on('click', () => {		  // id값 이용
+	
+// 		$('#btn2').on('click', function(){
+// 		$('input#btn2').on('click', function(){
+			alert($('#result2 p').html());
+		})
+		
+		$('#btn3').on('click', function(){
+			alert($('#result2 p').text());
+		})
+		
+		$('#btn4').on('click', () => {
+			
+			str = "";
+// 			$('#result2 p').each((i) => {
+// 				str += $('#result2 p').eq(i).html() + "\n";
+// 			})
+
+// 			$('#result2 p').each(function(){
+// 				str += $(this).html() + "\n";
+// 			})
+
+			$('#result2 p').each(function(i, v){
+				str += $(v).html() + "\n";
+			})
+
+			alert(str);
+		})
+	})
+</script>
+
+<style type="text/css">
+	span{
+		background: yellow;
+	}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+	<p>
+	내용가져오기<br>
+	html()<br>
+	text()<br>
+	</p>
+	
+	<input type="button" value="확인" id="btn1">
+	<br><br>
+	<div class="result" id="result1">Hello</div>
+</div>
+
+<div class="box">
+	<p>
+	p태그의 내용가져오기<br>
+	html() : 첫번째 p태그만 대상으로 하여 내용을 가져온다.<br>
+	p태그가 여러개일 경우 모든 p를 대상으로 하려면 반복문이 필요하다.<br>
+	$(요소).each(function(arg1, arg2) {}) <br>
+	$.each(요소, function(arg1, arg2) {}) <br>
+	text() : <br>
+	</p>
+	
+	<input type="button" value="p_html" id="btn2">
+	<input type="button" value="p_text" id="btn3">
+	<input type="button" value="all_p_html" id="btn4">
+	<br><br>
+	<div class="result" id="result2">
+		<p>초록마을에 사는 <span>짱구</span>입니다.</p>
+		<p>초록마을에 사는 <span>철수</span>입니다.</p>
+		<p>초록마을에 사는 <span>맹구</span>입니다.</p>
+		<p>초록마을에 사는 <span>훈이</span>입니다.</p>
+		<p>초록마을에 사는 <span>흰둥이</span>입니다.</p>
+	</div>
+</div>
+</body>
+</html>

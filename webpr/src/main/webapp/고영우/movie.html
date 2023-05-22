@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function proc1(){
+	
+	document.getElementById("mm").src = "../multi/아바타2.mp4";
+	document.getElementById("mm").play();
+}
+function proc2(){
+	document.getElementById("mm").src = "../multi/슬램덩크.mp4";
+	document.getElementById("mm").play();
+}
+</script>
+<style>
+	div{
+		width: 710px; 
+		height: 470px;
+		display: flex;
+	}
+	section{
+		flex: 65%;
+	}
+	aside{
+		display: flex;
+		flex-direction: column;
+		flex: 20%;
+		border: 1px solid black;
+	}
+	.m1{
+		width: 150px;
+		height: 200px;
+		margin: 10px auto;
+	}
+	video{
+		width: 520px;
+		height: 410px;
+		margin: 20px;
+	}
+	
+</style>
+</head>
+<body>
+
+<div>
+	<section>
+        <video id="mm" src="" controls ></video>
+	</section>
+	<aside>
+		<input type="image" src="../images/아바타2.jpg" alt="전송" class="m1" onclick="proc1()">
+		<input type="image" src="../images/슬램덩크.jpg" alt="전송" class="m1" onclick="proc2()">
+	</aside>
+</div>
+</body>
+</html>

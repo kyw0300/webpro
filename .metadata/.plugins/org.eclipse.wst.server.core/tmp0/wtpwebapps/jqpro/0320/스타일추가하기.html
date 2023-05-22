@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#result1 p').on('click',function(){
+		$(this).addClass('font20');
+	})
+	
+	$('#result1 p').on('dblclick',function(){
+		$(this).removeClass('font20');
+	})
+	
+	$('#result2 p').on('mouseover',function(){
+		$(this).addClass('font20').addClass('bcolor');
+	})
+	$('#result2 p').on('mouseout',function(){
+		$(this).removeClass('font20').removeClass('bcolor');
+	})
+	$('#result3 p').on('click',function(){
+		$(this).toggleClass('font20');
+	})
+	$('#result4 p').on('click',function(){
+		if($(this).hasClass('bcolor')){
+			$(this).removeClass('bcolor');
+		} else {
+			$(this).addClass('bcolor');
+		}
+	})
+})
+</script>
+
+<style>
+.font20{
+	font-size : 2.0em;
+}
+.bcolor{
+	background: lime;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+	<p>
+	click : addClass()<br>
+	dblclick : removeClass('font20')<br>
+	</p>
+	
+	<br><br>
+	<div class="result" id="result1">
+		<p>정대만 서태웅 송태섭 강백호 채치수</p>
+		<p>뚫어송태섭 뚫어송태섭 뚫어송태섭</p>
+		<p>뚫어송태섭 뚫어송태섭 뚫어송태섭</p>
+		<p>뚫어송태섭 뚫어송태섭 뚫어송태섭</p>
+	</div>
+</div>
+
+<div class="box">
+	<p>
+	mouseover : addClass('font20')<br>
+	mouseout : removeClass('bcolor')<br>
+	</p>
+	
+	<br><br>
+	<div class="result" id="result2">
+		<p>정대만 서태웅 송태섭 강백호 채치수</p>
+		<p>뚫어송태섭 뚫어송태섭 뚫어송태섭</p>
+		<p>뚫어송태섭 뚫어송태섭 뚫어송태섭</p>
+		<p>뚫어송태섭 뚫어송태섭 뚫어송태섭</p>
+	</div>
+</div>
+
+<div class="box">
+	<p>
+	click : toggleClass('font20')<br>
+	</p>
+	
+	<br><br>
+	<div class="result" id="result3">
+		<p>정대만 서태웅 송태섭 강백호 채치수</p>
+		<p>뚫어송태섭 뚫어송태섭 뚫어송태섭</p>
+		<p>뚫어송태섭 뚫어송태섭 뚫어송태섭</p>
+		<p>뚫어송태섭 뚫어송태섭 뚫어송태섭</p>
+	</div>
+</div>
+
+<div class="box">
+	<p>
+	click : hasClass('bcolor')<br>
+	</p>
+	
+	<br><br>
+	<div class="result" id="result4">
+		<p>정대만 서태웅 송태섭 강백호 채치수</p>
+		<p>뚫어송태섭 뚫어송태섭 뚫어송태섭</p>
+		<p>뚫어송태섭 뚫어송태섭 뚫어송태섭</p>
+		<p>뚫어송태섭 뚫어송태섭 뚫어송태섭</p>
+	</div>
+</div>
+</body>
+</html>

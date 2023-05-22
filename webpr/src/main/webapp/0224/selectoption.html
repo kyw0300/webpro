@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	select {
+		width: 200px;
+	}
+	select[name=foods] {
+		height: 25px;
+	}
+	select[name=foods2] {
+		height: 130px;
+	}
+	label{
+		display: inline-block;
+		width: 100px;
+		height: 30px;
+	}
+</style>
+</head>
+<body>
+<form action="selectoption.jsp" method="post">
+
+	<label for="id">아이디 </label>
+	<input type="text" name="id" id="id"><br>
+	
+	<label for="name">이름 </label> 
+	<input type="text" name="name" id="name"><br>
+	<br>
+	
+	<label for="">한개만 선택 </label>
+	<select name="foods">
+		<option>치킨</option>
+		<option>불고기</option>
+		<option>피자</option>
+		<option>삼겹살</option>
+		<option>미역국</option>
+		<option>열무김치</option>
+		<option>칼국수</option>
+		<option>초밥</option>
+		<option selected>짬뽕</option>
+	</select>
+	
+	<br><br>
+	여러개 선택<br>
+	<select name="foods2" size="6" multiple="multiple">
+		<option>치킨</option>
+		<option>불고기</option>
+		<option>피자</option>
+		<option>삼겹살</option>
+		<option>미역국</option>
+		<option>열무김치</option>
+		<option>칼국수</option>
+		<option>초밥</option>
+		<option selected>짬뽕</option>
+	</select>
+	
+	<br><br>
+	<input type="submit">
+	<button>전송</button>
+	<button type="submit">전송</button>
+	<input type="image" src="../images/image.2.jpg" alt="전송">
+</form>
+</body>
+</html>

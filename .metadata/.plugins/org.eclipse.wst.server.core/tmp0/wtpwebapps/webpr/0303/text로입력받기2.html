@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<script type="text/javascript">
+	function proc1(op){
+		// 입력요소 검색 - 입력값 가져오기
+		fvalue = parseInt(document.getElementById('first').value);
+		svalue = parseInt(document.getElementById('second').value);
+		
+		// 비교 계산 ㄱㄱ
+		switch(op){
+		case '+': res = fvalue + svalue;
+			break;
+		case '-': res = fvalue - svalue;
+			break;
+		case '*': res = fvalue * svalue;
+			break;
+		case '/': res = fvalue / svalue;
+			break;
+		default : res = "입력 오류입니다."
+			break;
+		}
+		
+		// 출력요소 검색 - 출력
+		document.getElementById('result').value = res;
+		document.getElementById('dres').innerHTML = res;
+	}
+</script>
+</head>
+<body>
+첫번째수 <input type="text" id="first"><br>
+두번째수 <input type="text" id="second"><br>
+<br>
+<input type="button" value="+" onclick="proc1('+')">
+<input type="button" value="-" onclick="proc1('-')">
+<input type="button" value="*" onclick="proc1('*')">
+<input type="button" value="/" onclick="proc1('/')">
+<br><br>
+결과<br>
+<input type="text" id="result"><br><br>
+<div id="dres"></div>
+</body>
+</html>

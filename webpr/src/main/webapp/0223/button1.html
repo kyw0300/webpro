@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	span {
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+	}
+</style>
+</head>
+<body>
+<form>
+	<span>아이디</span>
+	<input type="text" name="id"><br>
+	
+	<span>비밀번호</span>
+	<input type="password" name="pass"><br>
+	
+	<input type="button" value="확인" onclick="alert('hello')">
+</form>
+<br>
+<br>
+
+<form action="button.jsp" method="post">
+	<span>아이디</span>
+	<input type="text" name="id"><br>
+	
+	<span>비밀번호</span>
+	<input type="password" name="pass"><br>
+	
+	<span>성별</span>
+	<input type="radio" name="gender" value="남자" checked>남성
+	<input type="radio" name="gender" value="여자">여성
+	<br>
+	
+	<span>좋아하는 음식</span><br>
+	<input type="checkbox" name="foods" value="떡볶이">떡볶이
+	<input type="checkbox" name="foods" value="우동">우동
+	<input type="checkbox" name="foods" value="삼겹살" checked>삼겹살
+	<input type="checkbox" name="foods" value="김치찌개">김치찌개
+	<input type="checkbox" name="foods" value="짬뽕">짬뽕
+	<input type="checkbox" name="foods" value="치킨" checked>치킨
+	<input type="checkbox" name="foods" value="돈까스">돈까스
+	<input type="checkbox" name="foods" value="짜장면">짜장면
+	<input type="checkbox" name="foods" value="쌀국수">쌀국수
+	<br><br>
+	<span>첨부파일</span>
+	<input type="file" name="file"><br>
+	
+	<input type="submit">
+</form>
+</body>
+</html>

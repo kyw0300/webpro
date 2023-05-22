@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script type="text/javascript">
+proc1 = () => {
+	setTimeout(function(){
+		document.getElementById('result1').style.backgroundColor = "red";
+	}, 1000);
+}
+
+proc2 = (but) => {
+	but.style.display = "none";
+	gbut = but;
+	a = setInterval(setOut, 500);
+}
+
+stop = () => {
+	gbut.style.display = "inline";
+	clearInterval(a);
+}
+
+function setOut(){
+	
+	cr = parseInt(Math.random()*256);
+	cg = parseInt(Math.random()*256);
+	cb = parseInt(Math.random()*256);
+	
+	document.getElementById('result2').style.backgroundColor
+					= "rgb(" + cr + "," + cg + "," + cb +")";
+}
+</script>
+</head>
+
+<body>
+
+<div class="box">
+	<p>setTimeout(fn, millisec): millisec 시간이 경과한 후 fn을 수행 후 종료
+	</p>
+	
+	<input type="button" value="확인" onclick="proc1()">
+	<br><br>
+	<div class="result" id="result1"></div>
+</div>
+
+<div class="box">
+	<p>변수 = setInterval(fn, millisec): millisec 시간이 경과할 때마다 fn을 수행<br>
+	clearInterval(변수): 변수에 실행을 종료.
+	</p>
+	
+	<input type="button" value="시작" onclick="proc2(this)">
+	<input type="button" value="종료" onclick="stop()">
+	<br><br>
+	<div class="result" id="result2"></div>
+</div>
+</body>
+</html>

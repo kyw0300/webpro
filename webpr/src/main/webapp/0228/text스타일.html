@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{
+		height: 200px;
+		border: 1px solid brown;
+		margin: 10px;
+		font-size: 1.0em;
+/* 		overflow: auto; */
+	}
+	#d1{
+		text-indent: 50px;
+		line-height: 40px;
+		letter-spacing: 10px;
+	}
+	#d2 h1{
+		text-shadow: 20px 20px 1px red;
+	}
+	textarea {
+		direction: rtl;
+	}
+	span{
+		text-decoration: underline;
+	}
+	#d4 p:first-child{
+		text-transform: uppercase;
+	}
+	#d4 p:nth-child(2){
+		text-transform: lowercase;
+	}
+	#d4 p:last-child{
+		text-transform: capitalize;
+	}
+	#d5{
+		width: 500px;
+/* 		word-wrap : break-word; */
+	}
+</style>
+</head>
+<body>
+<div id="d1">
+<span>무궁화 꽃이 피었습니다</span>
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+
+무궁화 꽃이 피었습니다무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+
+
+무궁화 꽃이 피었습니다무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+</div>
+
+<div id="d2">
+<h1>무궁화 꽃이 피었습니다</h1>
+무궁화 꽃이 피었습니다무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다무궁화 꽃이 피었습니다
+
+무궁화 꽃이 피었습니다무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다무궁화 꽃이 피었습니다
+무궁화 꽃이 피었습니다
+</div>
+
+<textarea rows="5" cols="50" id="d3"></textarea>
+<div id="d4">
+<p>Happy New Year - uppercase</p>
+<p>Happy New Year - lowercase</p>
+<p>Happy New Year - capitalize</p>
+</div>
+<div id="d5">
+mynameisgogoguri mynameisgogo
+</div>
+<br>
+<input type="button" value="확인" onclick="proc1()">
+
+<script>
+	function proc1() {
+		// 새로운 문자를 만든다 - text object - document.createTextNode("문자열")
+		// var 있으면 지역변수, 없으면 전역변수
+		var tnode = document.createTextNode("hello");
+		
+		// id가 d5인 요소를 검색
+		vd5 = document.getElementById("d5");
+		
+		// text object을 d5인 요소에 추가한다 - d5.appendChild(text object)
+		vd5.appendChild(tnode);
+	}
+</script>
+
+</body>
+</html>

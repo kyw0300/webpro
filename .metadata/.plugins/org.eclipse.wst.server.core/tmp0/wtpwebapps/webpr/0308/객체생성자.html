@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+
+<!-- 외부 스크립트 -->
+<script src="../js/rectprint.js"></script>
+
+<script type="text/javascript"> // 내부 스크립트
+//객체 함수 선언 정의
+function MYRect(width,height){
+	this.width = width;
+	this.height = height;
+	
+	this.getArea = function(){
+		return this.width * this.height;
+	};
+	this.getCircum = function(){
+		return (parseInt(this.width) + parseInt(this.height)) * 2;
+	};
+}
+
+proc1 = () => {
+	
+	//객체 생성
+	my = new MYRect(24,16);
+	my.name = "네모네모스폰지밥";
+	
+	printInfo(my, 'result1');
+}
+
+proc2 = () => {
+	
+	//객체 생성
+	my2 = new MYRect(34,56);
+	my2.name = "스폰지밥";
+	
+	printInfo(my, 'result1');
+}
+</script>
+</head>
+
+<body>
+
+<div class="box">
+	<p>
+	</p>
+	
+	<input type="button" value="확인" onclick="proc1()">
+	<br><br>
+	<div class="result" id="result1"></div>
+</div>
+</body>
+</html>

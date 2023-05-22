@@ -1,0 +1,36 @@
+@charset "UTF-8";
+	div{
+		width: 710px; 
+		height: 470px;
+/* 		border: 1px solid red; */
+		display: flex;
+		justify-content: space-between;
+	}
+	article{
+/*  		border: 1px solid green;  */
+		width: 220px;
+		height: 100%;
+	}
+	#art1{
+		border-right: 1px solid #DDDEE0;
+	}
+	#art2{
+		border-left: 1px solid #DDDEE0;
+		border-right: 1px solid #DDDEE0;
+	}
+	#art3{
+		border-left: 1px solid #DDDEE0;
+	}
+	article img{
+/* 		border: 1px solid blue; */
+	 	width: 200px;
+	 	height: 170px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	p, input{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	

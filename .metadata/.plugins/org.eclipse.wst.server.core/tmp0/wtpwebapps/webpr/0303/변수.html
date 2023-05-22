@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#result{
+		border: 1px solid blue;
+		width: 500px;
+		height: 200px;
+		padding: 20px;
+	}
+</style>
+
+	<script type="text/javascript">
+	function sub(a,b){
+		res = a - b; // 전역변수
+	}
+	function add(a,b){
+		let ares = a + b; // 지역변수
+		return ares;
+	}
+	
+	window.onload = function(){
+		
+// 		sub(10,4);
+// 		vadd = add(10,4);
+		
+// 		let vres = document.getElementById('result');
+		
+// 		vres.innerHTML = " 10 - 4 = " + res + "<br>"; 
+// 		vres.innerHTML += " 10 + 4 = " + vadd + "<br>";
+		
+		sub(10,4);
+		document.getElementById('result').innerHTML = "10 - 4 = " + res + "<br>";
+		document.getElementById('result').innerHTML += "10 + 4 = " + add(10,4) + "<br>";
+	}
+	
+	</script>
+
+</head>
+<body>
+<div id="result"></div>
+</body>
+</html>

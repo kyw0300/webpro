@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function proc1() {
+		//html요소에 접근검색- id, class, tagname, name
+		//접근메소드 - document.getElementById('id이름')
+		//          document.getElementsByClass('class이름') 
+		//          document.getElementsByTagName('tag이름')
+		//          document.getElementsByName('name이름')
+		
+		//			document.formname.요소name
+		
+		//			document.querySelector('#이름')
+		//			document.querySelector('.이름')
+		//			document.querySelector('tag이름')
+		
+		//			document.querySelectorAll('.이름')
+		//			document.querySelectorAll('tag이름')
+		var a = document.querySelector('#price');
+		var b = document.querySelector('#qty');
+		
+		//입력한 값을 가져온다
+		var avalue = a.value;
+		var bvalue = b.value;
+		
+		//계산
+		var res = avalue * bvalue;
+		
+		//출력 - id=result를 검색 - innerHTML / innerText
+		var result = document.querySelector('#result');
+		
+		//result.innerText = res;
+		result.innerHTML = "<h2>" + res + "</h2>"
+	}
+</script>
+<style type="text/css">
+	#result, #result2{
+		border: 2px dotted gold;
+		height: 100px;
+	}
+	form{
+		border: 1px solid crimson;
+		margin: 10px;
+		padding: 10px;
+	}
+</style>
+</head>
+<body>
+<form>
+	물품가격 <input type="text" name="price" id="price"><br>
+	수량 <input type="text" name="qty" id="qty"><br>
+	<br>
+	<input type="button" value="확인" onclick="proc1()">
+	<br><br>
+	<h1>결과값</h1>
+	<div id="result"></div>
+</form>
+
+<form action="calc.jsp" method="post">
+	물품가격 <input type="text" name="price" id="price2"><br>
+	수량 <input type="text" name="qty" id="qty2"><br>
+	<br>
+	<p>이미지를 클릭하면 서버로 전송된다. submit기능을 수행한다.</p>
+	<input type="image" src="../images/image.1.jpg" alt="">
+	<br><br>
+	<h1>결과값</h1>
+	<div id="result2"></div>
+</form>
+</body>
+</html>

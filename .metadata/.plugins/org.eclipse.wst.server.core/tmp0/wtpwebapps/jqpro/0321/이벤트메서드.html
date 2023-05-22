@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+// 	$('#btn1').bind('click',function(){
+// 	})
+// 	$('#btn1').click(function(){
+// 	})
+	$('#btn1').on('click',function(){
+		ptag = "<p class='pp'>정대만</p>";
+		$('#result1').append(ptag);
+	})
+	
+	$('#btn2').click(function(){
+		$('#btn1').off();
+	})
+	$('#btn').click(function(){
+		$('#btn1').on('click',function(){
+			ptag = "<p class='pp'>정대만</p>";
+			$('#result1').append(ptag);
+		})
+	})
+
+	$('#btn3').one('click',function(){
+		ptag = "<p class='pp'>서태웅</p>";
+		$('#result3').append(ptag);
+	})
+	
+	// bind형식의 이벤트 핸들러이기 때문에 새롭게 만들어진 요소에는 적용되지 않는다.
+// 	$('.pp').on('click',function(){
+// 		alert("pp")
+// 	})
+	
+	// 새롭게 만들어진 요소의 이벤트 핸들러 작성
+// 	$(document).deligate('.pp','click',function(){})
+	$(document).on('click','.pp',function(){ // 추천
+		
+		cr = parseInt(Math.random()*256);
+		cg = parseInt(Math.random()*256);
+		cb = parseInt(Math.random()*256);
+		
+		cr16 = cr.toString(16);
+		cg16 = cg.toString(16);
+		cb16 = cb.toString(16);
+		
+		// this ==> 클릭하는 .pp
+		$(this).css('background','#'+cr16+cg16+cb16);
+	})
+	$("#pclear").on('click',function(){
+		//새로 만들어진 p태그의 이벤트 핸들러를 제거
+		$(document).off('click','.pp');
+	})	
+})
+</script>
+</head>
+
+<body>
+
+<div class="box">
+	<p>
+	버튼 클릭시 p태그를 생성하여 result1에 추가한다.<br>
+	이벤트종료 버튼 클릭시 더 이상 클릭이벤트 핸들러 작동하지 않는다.<br>
+	</p>
+	
+	<input type="button" value="클릭" id="btn1">
+	<input type="button" value="이벤트종료" id="btn2">
+	<input type="button" value="이벤트시작" id="btn">
+	<br>
+	<br><br>
+	<div class="result" id="result1">
+		새롭게 만들어진 요소의 이벤트 핸들러 작성시 deligate 방식으로 처리<br>
+		$(document).on('click','.pp',function(){ })<br>
+		<input type="button" value="p클릭해제" id="pclear"><br>
+	</div>
+</div>
+
+<div class="box">
+	<p>
+	버튼 클릭시 p태그를 생성하여 result3에 추가한다.
+	한 번만 실행되도록 한다.
+	</p>
+	
+	<input type="button" value="클릭" id="btn3">
+	<br><br>
+	<div class="result" id="result3"></div>
+</div>
+</body>
+</html>

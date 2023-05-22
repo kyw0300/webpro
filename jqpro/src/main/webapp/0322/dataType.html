@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+xhr = new XMLHttpRequest();
+$(function(){
+	$('#txt').on('click',function(){
+		//요청
+		xhr.open("get", "text.jsp", true);
+		xhr.send();
+		
+		//응답
+		xhr.onreadystatechange = function(){
+			if(this.readyState==4 && this.status==200){
+				res = this.responseText;
+				// res=정대만/서태웅/송태섭/채치수/강백호
+				
+				res = res.split('/');
+				
+				code = "<ul>"
+				$.each(res,function(i){
+					code += "<li>" + res[i] + "</li>";
+				})
+				code += "</ul>"
+				
+// 				document.getElementById('result1').innerHTML() = code;
+				$('#result1').html(code);
+			}
+		}
+	})
+	
+	$('#jarr').on('click',function(){
+		//요청
+		xhr.open("get", "jsonArr.jsp", true);
+		xhr.send();
+		
+		//응답
+		xhr.onreadystatechange = function(){
+			if(this.readyState==4 && this.status==200){
+				res = this.responseText;
+				// res=정대만/서태웅/송태섭/채치수/강백호
+				
+				//json배열로 변환
+				resjson = JSON.parse(res);
+				
+				code = "<ol>"
+				$.each(resjson, function(i){
+					code += "<li>" + resjson[i] + "</li>";
+				})
+				code += "</ol>"
+				
+// 				document.getElementById('result2').innerHTML() = code;
+				$('#result2').html(code);
+			}
+		}
+	})
+	
+	$('#jobj').on('click', function(){
+		//요청
+		xhr.open("get", "jsonObj.jsp", true);
+		xhr.send();
+		
+		//응답
+		xhr.onreadystatechange = function(){
+			if(this.readyState==4 && this.status==200){
+				res = this.responseText;
+				resjson = JSON.parse(res);
+				
+				code = "아이디 : " + resjson.id + "<br>"
+				code += "이름 : " + resjson.name + "<br>"
+				code += "전화번호 : " + resjson.tel + "<br>"
+				code += "이메일 : " + resjson.mail + "<br>"
+				
+				$('#result3').html(code);
+			}
+		}
+	})
+	
+	$('#jobarr').on('click', function(){
+		//요청
+		xhr.open("get", "jsonObjArr.jsp", true);
+		xhr.send();
+		
+		//응답
+		xhr.onreadystatechange = function(){
+			if(this.readyState==4 && this.status==200){
+				res = this.responseText;
+				resjson = JSON.parse(res);
+				
+				code = "";
+				$(resjson).each(function(i,v){
+					code += (i+1) + "번째 북산고 멤버 <br>"
+					code += "아이디 : " + resjson[i].id + "<br>"
+					code += "이름 : " + resjson[i].name + "<br>"
+					code += "전화번호 : " + v.tel + "<br>"
+					code += "이메일 : " + v.mail + "<br><br>"
+				})
+				
+// 				$('#result4').html(code);
+				document.getElementById('result4').innerHTML = code;
+			}
+		}
+	})
+	
+	$('#sync').on('click',function(){
+		location.href="sync.jsp";
+	})
+})
+</script>
+<style type="text/css">
+#result{
+	box-sizing: border-box;
+	width: 95%;
+	display: flex;
+	flex-wrap: wrap;
+	height: 80%;
+}
+#result div{
+	border: 1px solid green;
+	padding: 10px;
+	margin: 5px;
+	flex : 1;
+	width: 300px;
+}
+/* div.box{ */
+/* 	height: auto; */
+/* } */
+/* #result *{ */
+/* 	overflow: auto; */
+/* } */
+</style>
+</head>
+
+<body>
+
+<div class="box">
+	<p>
+	</p>
+	
+	<input type="button" value="동기1" onclick="location.href='sync.jsp'">
+	<input type="button" value="동기2" id="sync">
+	<input type="button" value="text" id="txt">
+	<input type="button" value="json배열" id="jarr">
+	<input type="button" value="jsonObject" id="jobj">
+	<input type="button" value="jsonObj배열" id="jobarr">
+	<br><br>
+	
+	<div id="result">
+		<div class="result" id="result1"></div>
+		<div class="result" id="result2"></div>
+		<div class="result" id="result3"></div>
+		<div class="result" id="result4"></div>
+	</div>
+	
+</div>
+</body>
+</html>

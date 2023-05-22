@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+D:\A_TeachingMaterial\webpro\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1585106647.index
+1355745543.index
+3826121286.index
+3789571762.index
+180381478.index
+2583754412.index
+1474503785.index
+2983855899.index

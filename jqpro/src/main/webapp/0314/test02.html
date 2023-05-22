@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/mystyle.css">
+<script src="http://code.jquery.com/jquery-3.6.4.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+function proc1() {
+	// id=result1인 요소를 검색하여 'Hello'를 출력한다.
+// 	document.getElementById('result1').innerHTML = '<h1>Hello</h1>';
+	
+	$('#result1').html("<h1>Hello</h1>");
+}
+window.onload = () => { // 람다식
+	// 버튼을 클릭하면
+	$('#btn2').on('click', () => {
+		// result2을 검색
+		$('#result2').html("<h1>안녕하세요~ 초록마을에 사는 짱구할아버지에용~</h1>");
+	})
+}
+
+// $(document).ready(function(){
+// 	// 버튼을 클릭하면
+// 	$('#btn2').on('click', function(){
+// 	})
+// })
+
+</script>
+</head>
+
+<body>
+
+<div class="box">
+	<p>
+	버튼의 이벤트 핸들러 설정 방법<br>
+	&lt;input type="button" value="확인" onclick="proc1()">
+	</p>
+	
+	<input type="button" value="확인" onclick="proc1()">
+	<br><br>
+	<div class="result" id="result1"></div>
+</div>
+
+<div class="box">
+	<p>
+	버튼의 이벤트 핸들러 설정 방법<br>
+	jQuery방식으로 onclick이벤트를 설정
+	$('#btn2').on('click', function(){});
+	</p>
+	
+	<input type="button" value="확인" id=btn2>
+	<br><br>
+	<div class="result" id="result2"></div>
+</div>
+</body>
+</html>

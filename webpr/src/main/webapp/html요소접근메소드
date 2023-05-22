@@ -1,0 +1,21 @@
+html요소에 접근검색- id, class, tagname, name
+	접근메소드 - document.getElementById('id이름')
+		      document.getElementsByClassName('class이름') 
+		      document.getElementsByTagName('tag이름')
+		      document.getElementsByName('name이름')
+		
+			  document.formname.요소name
+		
+			  document.querySelector('#이름')    	--첫번째 것만 찾음
+			  document.querySelector('.이름')
+			  document.querySelector('tag이름')
+		
+			  document.querySelectorAll('.이름')  	--전체 다 찾음
+			  document.querySelectorAll('tag이름')
+					
+<출력>
+document.querySelector('#이름').innerHTML = str;
+출력하는 str속에 html태그가 포함 되었을 경우
+
+innerText = str;
+출력하는 str속에 html태그가 포함 되어있지 않은 경우

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Young-woo Shop~</title>
+
+<style>
+	header,nav,footer,#container {
+		width: 1200px;
+		margin: auto;
+		margin-bottom: 10px;
+/* 		border: 1px solid white; */
+		box-sizing: border-box;
+	}
+	header, nav, #left, section, #right, footer, iframe{
+		border-radius: 20px;
+	}
+	header{
+		height: 150px;
+		margin-top: 30px;
+		background: #6D7996;
+	}
+	h1{
+		font-size: 3.0em;
+	}
+	h1 a{
+		text-decoration: none;
+		color: white;
+	}
+	nav{
+		height: 100px;
+		text-align: center;
+		background: #434C60;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	nav ul{
+		list-style-type: none;
+		margin-top: 30px;
+		border-top: 3px solid white;
+		border-bottom: 3px solid white;
+		flex: 100%;
+	}
+	nav ul li{
+/* 		border: 1px solid green; */
+ 		display: inline-block;
+/*   		float: left; */
+  		margin: auto 30px;
+	}
+	nav ul li a{
+		font-size: 1.5em;
+		text-decoration: none;
+		color: white;
+	}
+	nav ul li a:hover{background:red; color:white;}
+	#container{
+		display : flex;
+		height: 500px;
+	}
+	aside{
+/* 		border: 1px solid orange; */
+		flex: 18%;
+	}
+	#left{
+		background-color: #6D7996;
+		
+	}
+	
+	#right{
+		background-color: beige;
+	}
+	#right{
+		box-sizing: border-box;
+		padding: 10px;
+	}
+	#left ul{
+		margin-top: 150px;
+/* 		border: 1px solid red; */
+		list-style-type: none;
+		padding-left: 1px;
+	}
+	#left ul li{
+		border: 1px solid #434C60;
+		background: #525D76;
+	}
+	#left ul li a{
+		font-size: 1.3em;
+		text-decoration: none;
+		color: white;
+	}
+	#left ul li a:hover{background:red; color:white;}
+	section{
+/* 		border: 1px solid orange; */
+		flex: 60%;
+		margin: 0px 10px;
+	}
+	footer{
+		height: 60px;
+		background: #434C60;
+		color: white;
+		text-align: center;
+	}
+	img{
+		float: left;
+		margin-top: 25px;
+		margin-left: 25px;
+		margin-right: 10px;
+	}
+		
+	
+</style>
+
+</head>
+<body>
+
+<header>
+		<img src="../images/게코.jpg" alt="게코.jpg" width="120px" height="100px">
+	<h1>
+		<br>
+		<a href="">Web Shop</a>
+	</h1>
+</header>
+
+<nav>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About Us</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">My Account</a></li>
+		<li><a href="#">Contacts</a></li>
+	</ul>
+</nav>
+
+<div id="container">
+	<aside id="left">
+		<ul>
+			<li><a href="computer.html" target="ifr">컴퓨터</a></li>
+			<li><a href="clothing.html" target="ifr">의류</a></li>
+			<li><a href="music.html" target="ifr">음악</a></li>
+			<li><a href="movie.html" target="ifr">영화</a></li>
+			<li><a href="sports.html" target="ifr">스포츠/레져</a></li>
+			<li><a href="interior.html" target="ifr">가구/인테리어</a></li>
+			<li><a href="food.html" target="ifr">식품</a></li>
+		</ul>
+	</aside>
+	<section id="main">
+		<article id="article1">
+			<iframe src="computer.html" name="ifr" width="730px" height="495px">
+			</iframe>
+		</article>
+	</section>
+	<aside id="right">
+		<div id="shopcart">
+			<h3>Shopping Cart</h3>
+			<p>현재 쇼핑카트에 물품이 없습니다.</p>
+			<a href="shopcart.html" target="_blank">쇼핑카트 보기</a>
+			<br><br><br>
+			
+		</div>
+		
+		<div id="login">
+			<h3>Log In</h3>
+			<form action="">
+			아이디<br>
+			<input type="text" width="100px"><br>
+			패스워드
+			<input type="password" width="100px"><br><br>
+			<input type="button" value="로그인">
+			<input type="reset" value="초기화"><br>
+			<a href="register.html" target="_blank">회원가입</a>
+			<a href="">비밀번호 분실</a>
+			</form>
+		</div>
+	</aside>
+</div>
+<footer>
+<br>
+Copyright (c) 2023 KO 대전 도안동 영우네 쇼핑몰</footer>
+</body>
+</html>

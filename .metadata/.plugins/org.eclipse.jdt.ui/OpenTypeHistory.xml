@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=jqpro/src\/main\/java&lt;kr.or.ddit.member.dao{IMemberDao.java[IMemberDao" modifiers="513" timestamp="1680076588271"/>
+    <typeInfo handle="=jqpro/C:\/Users\/PC-14\/Downloads\/eclipse-jee-2022-12-R-win32-x86_64\/eclipse\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.5.v20221102-0933\/jre\/lib\/jrt-fs.jar`java.desktop=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&lt;java.awt.image(ImageProducer.class[ImageProducer" modifiers="1537" timestamp="1667349388000"/>
+    <typeInfo handle="=jqpro/src\/main\/java&lt;kr.or.ddit.member.service{IMemberService.java[IMemberService" modifiers="513" timestamp="1680076588293"/>
+    <typeInfo handle="=jqpro/src\/main\/java&lt;kr.or.ddit.lprod.dao{ILprodDao.java[ILprodDao" modifiers="513" timestamp="1679639588218"/>
+    <typeInfo handle="=jqpro/src\/main\/java&lt;kr.or.ddit.lprod.service{ILprodService.java[ILprodService" modifiers="513" timestamp="1679639588229"/>
+    <typeInfo handle="=jqpro/src\/main\/java&lt;kr.or.ddit.buyer.service{IBuyerService.java[IBuyerService" modifiers="513" timestamp="1679645695668"/>
+    <typeInfo handle="=jqpro/src\/main\/java&lt;kr.or.ddit.buyer.dao{IBuyerDao.java[IBuyerDao" modifiers="513" timestamp="1679645695678"/>
+    <typeInfo handle="=jqpro/D:\/A_TeachingMaterial\/webpro\/apache-tomcat-8.5.85\/lib\/ecj-4.6.3.jar=/javadoc_location=/https:\/\/tomcat.apache.org\/tomcat-8.5-doc\/api\/=/=/owner.project.facets=/jst.web=/&lt;org.eclipse.jdt.internal.compiler.env(IBinaryTypeAnnotation.class[IBinaryTypeAnnotation" modifiers="1537" timestamp="1673363356000"/>
+    <typeInfo handle="=jqpro/src\/main\/java&lt;kr.or.ddit.prod.dao{IProdDao.java[IProdDao" modifiers="513" timestamp="1679911239176"/>
+    <typeInfo handle="=jqpro/src\/main\/java&lt;kr.or.ddit.board.dao{IBoardDao.java[IBoardDao" modifiers="513" timestamp="1680761751743"/>
+</typeInfoHistroy>
